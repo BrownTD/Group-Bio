@@ -31,16 +31,27 @@ header {
 }
 
 .hero {
+    position: relative;
     max-width: 840px;
     margin: 0 auto;
+    overflow: hidden;
+    padding: 40px 24px;
+    border-radius: 24px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.94)),
+        url("img/team-logo.png") center / min(72vw, 520px) no-repeat;
+    opacity: 0.9;
 }
 
 .team-logo {
-    width: 128px;
-    height: 128px;
-    object-fit: contain;
-    margin-bottom: 16px;
-    filter: drop-shadow(0 16px 24px rgba(23, 32, 51, 0.12));
+    display: none;
 }
 
 .eyebrow {
@@ -154,9 +165,15 @@ main {
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
+    object-position: center;
     border-radius: 14px;
     margin-bottom: 24px;
     background: var(--surface-soft);
+}
+
+/* Adjust this value to move Nevyn's photo crop: lower % moves the image upward. */
+.nevyn-photo {
+    object-position: center 18%;
 }
 
 .card-header {
