@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runtime Collective</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="hero">
+        <img src="img/team-logo.png" alt="Runtime Collective logo" class="team-logo">
+        <p class="eyebrow">ITSC-3155 Final Project Team</p>
+        <h1>Runtime Collective</h1>
+        <p class="hero-copy">
+            Two computer scientists building practical, secure, and user-focused software with startup energy and systems discipline.
+        </p>
+    </div>
+
+    <nav>
+        <button class="nav-button active" onclick="showSection('bios', this)">Team Bios</button>
+        <button class="nav-button" onclick="showSection('vision', this)">Team Vision</button>
+    </nav>
+</header>
+
+<main>
+    <section id="bios" class="container bios-grid">
+        <article class="card nevyn-card">
+            <img src="img/brown.jpg" alt="Nevyn Brown" class="profile-photo">
+            <div class="card-header">
+                <p class="role">Software Engineer | Product Builder</p>
+                <h2>Nevyn Brown</h2>
+            </div>
+            <p class="summary">
+                Software engineer focused on building useful products, learning through entrepreneurship, and turning ambitious ideas into real systems.
+            </p>
+            <button class="toggle-button" onclick="toggleBio('bio-nevyn', this)">Show Bio</button>
+            <div id="bio-nevyn" class="bio">
+                <p>
+                    I am a software engineer passionate about building technology that solves real-world problems. I am currently a Software Engineer Intern at Bank of America while also building FundU, a platform reimagining fundraising by helping organizations raise money through everyday purchases instead of traditional donation asks.
+                </p>
+                <div class="moodboard">
+                    <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+                    <span>Product Design</span>
+                    <span>Startups</span>
+                    <span>FastAPI</span>
+                    <span>Fundraising Tech</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="card hernan-card">
+            <img src="img/hernan.jpeg" alt="Hernan Martinez" class="profile-photo">
+            <div class="card-header">
+                <p class="role">Cybersecurity | Systems | Hardware</p>
+                <h2>Hernan Martinez</h2>
+            </div>
+            <p class="summary">
+                USMC veteran studying Computer Science with a cybersecurity concentration and hands-on experience in technical hardware and Linux systems.
+            </p>
+            <button class="toggle-button" onclick="toggleBio('bio-hernan', this)">Show Bio</button>
+            <div id="bio-hernan" class="bio">
+                <p>
+                    I am a USMC veteran majoring in Computer Science with a concentration in Cybersecurity. My background includes technical hardware experience and Linux systems, giving me a practical view of how software, infrastructure, and security work together.
+                </p>
+                <div class="moodboard">
+                    <span>Linux</span>
+                    <span>Cybersecurity</span>
+                    <span>Systems Thinking</span>
+                    <span>Hardware</span>
+                    <a href="https://owasp.org" target="_blank" rel="noreferrer">OWASP</a>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section id="vision" class="container vision-panel" style="display: none;">
+        <div class="vision-card">
+            <p class="eyebrow">Mission Statement</p>
+            <h2>Build useful software with clarity, security, and respect.</h2>
+            <p>
+                Runtime Collective combines product thinking, engineering discipline, and security awareness. Our goal is to create software that is practical, reliable, and easy for real people to use.
+            </p>
+        </div>
+
+        <div class="rules-grid">
+            <div class="rule-card">
+                <h3>Commitment</h3>
+                <p>We finish our work and communicate early if something blocks progress.</p>
+            </div>
+            <div class="rule-card">
+                <h3>Focus</h3>
+                <p>We prioritize the project requirements first, then polish and stretch features after the core works.</p>
+            </div>
+            <div class="rule-card">
+                <h3>Openness</h3>
+                <p>We share honest updates, ask questions, and make decisions where everyone can see them.</p>
+            </div>
+            <div class="rule-card">
+                <h3>Respect</h3>
+                <p>We listen, review each other's work constructively, and value both product and security perspectives.</p>
+            </div>
+        </div>
+
+        <div class="contributor-note">
+            <strong>Contributors:</strong> Nevyn Brown and Hernan Martinez
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
